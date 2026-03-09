@@ -43,11 +43,15 @@ public class Main {
             dl.setBirthMonthDayGender(mdUtil.encodeMonthDayGender(year, month, day, gender));
             dl.setOverflow(0);
 
+            // adding the minnesota formatter
             DriversLicenseFormatter fl = new FloridaFormatter();
             DriversLicenseFormatter wi = new WisconsinFormatter();
+            DriversLicenseFormatter mn = new MinnesotaFormatter();
 
+            // printing ou the minnesota formatter
             System.out.println("Florida License: " + fl.formatLicenseNumber(dl));
             System.out.println("Wisconsin License: " + wi.formatLicenseNumber(dl));
+            System.out.println("Minnesota License: " + mn.formatLicenseNumber(dl));
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
